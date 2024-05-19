@@ -16,11 +16,11 @@
 # IDEs and editors
 */.idea/
 */.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+*/.classpath
+*/.c9/
+*/*.launch
+*/.settings/
+*/*.sublime-workspace
 
 # Visual Studio Code
 .vscode/*
@@ -28,17 +28,17 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
+*/.history/*
 
 # Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
+*/.angular/cache
+*/.sass-cache/
+*/connect.lock
+*/coverage
+*/libpeerconnection.log
+*/testem.log
+*/typings
 
 # System files
-.DS_Store
-Thumbs.db
+*/.DS_Store
+*/Thumbs.db
