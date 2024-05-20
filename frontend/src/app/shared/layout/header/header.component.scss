@@ -1,0 +1,19 @@
+header.header {
+  padding: 30px 0 49px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    .header-top {
+      padding: 32px 0 25px 0;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #C5C5C5;
+
+      .header-top-menu {
+        margin: 0 26px 0 191px;
+      }
+    }
+  }
+}
