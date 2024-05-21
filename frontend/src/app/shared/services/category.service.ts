@@ -12,6 +12,7 @@ export class CategoryService {
   constructor(private http: HttpClient) { }
 
   getCategories(): Observable<CategoryType[]> {
+    const test = '';
     return this.http.get<CategoryType[]>(environment.api + '/categories');
   }
 }
