@@ -13,6 +13,6 @@ export class CategoryService {
 
   getCategories(): Observable<CategoryType[]> {
     const test = '';
-    return this.http.get<CategoryType[]>(environment.api + '/categories');
+    return this.http.get<CategoryType[]>(environment.api + 'categories');
   }
 }

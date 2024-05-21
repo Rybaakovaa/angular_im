@@ -53,10 +53,7 @@
         <div class="header-bottom-menu">
           <nav>
             <ul>
-              <li><a>Комнатные растения</a></li>
-              <li><a>Флорариумы</a></li>
-              <li><a>Сухоцветы</a></li>
-              <li><a>Кашпо в горшках</a></li>
+              <li *ngFor="let category of categories"><a>{{category.name}}</a></li>
             </ul>
           </nav>
         </div>
