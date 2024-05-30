@@ -60,9 +60,47 @@
 
       &.offer-insta {
         .offer-image {
+          margin-top: 35px;
+        }
 
+        .offer-text {
+          margin-top: 16px;
+          max-width: 234px;
+          margin-left: 58px;
+        }
+
+        .offer-button {
+          margin-left: 168px;
+          margin-top: 22px;
+
+          .button {
+            width: 228px;
+          }
         }
       }
+
+      &.offer-collection {
+        .offer-title {
+          max-width: 362px;
+        }
+
+        .offer-image {
+          margin-top: 12px;
+          margin-left: 81px;
+        }
+
+        .offer-button {
+          margin-left: 44px;
+          margin-top: 75px;
+
+          .button {
+            width: 177px;
+          }
+        }
+      }
+
     }
   }
 }
+
+
