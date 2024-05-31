@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ProductService} from "../../shared/services/product.service";
+import {ProductType} from "../../../types/product.type";
 
 @Component({
   selector: 'app-main',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  products: ProductType[] = [];
+
+  constructor(private productService: ProductService) {
+  }
 
   ngOnInit(): void {
+    this.productService.getBestProducts()
+      .subscribe((data: ProductType[]) => {
+        this.products = data;
+      })
   }
 
 }

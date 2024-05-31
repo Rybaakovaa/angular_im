@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {PasswordRepeatDirective} from "./directives/password-repeat.directive";
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import {RouterModule} from "@angular/router";
 
 
 
@@ -11,10 +12,12 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     ProductCardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
-    PasswordRepeatDirective
+    PasswordRepeatDirective,
+    ProductCardComponent
   ]
 })
 export class SharedModule { }

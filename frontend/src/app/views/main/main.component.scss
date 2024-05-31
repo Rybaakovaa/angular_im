@@ -1,4 +1,5 @@
 @import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
 
 .main {
   background-image: url("../../../assets/images/page/main.png");
@@ -103,4 +104,35 @@
   }
 }
 
+
+.best-products {
+  padding: 120px 0 130px 0;
+
+  .carousel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    .carousel-title {
+      @include head-lora-32;
+    }
+
+    .carousel-arrows {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        cursor: pointer;
+
+        &:first-child {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+
+}
 

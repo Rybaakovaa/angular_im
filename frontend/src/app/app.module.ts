@@ -11,6 +11,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatMenuModule} from "@angular/material/menu";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {MatMenuModule} from "@angular/material/menu";
     HttpClientModule,
     MatSnackBarModule,
     MatMenuModule,
+    SharedModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
