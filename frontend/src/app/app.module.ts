@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatMenuModule} from "@angular/material/menu";
 import {SharedModule} from "./shared/shared.module";
+import {CarouselModule} from "ngx-owl-carousel-o";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {SharedModule} from "./shared/shared.module";
     MatSnackBarModule,
     MatMenuModule,
     SharedModule,
+    CarouselModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
