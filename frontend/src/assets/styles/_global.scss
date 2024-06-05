@@ -1,3 +1,6 @@
+@import "variables";
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -58,10 +61,14 @@ html, body {
     border: 1px solid #6cac72;
     border-radius: 5px;
     padding: 15px 58px;
+    color: $green-text-color;
   }
 
   &.button-icon {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
   }
 
   &:disabled {
@@ -83,5 +90,31 @@ a.button {
   a {
     text-decoration: none;
     color: $grey-text-color;
+  }
+}
+
+
+.carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  .carousel-title {
+    @include head-lora-32;
+  }
+
+  .carousel-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      cursor: pointer;
+
+      &:first-child {
+        margin-right: 30px;
+      }
+    }
   }
 }

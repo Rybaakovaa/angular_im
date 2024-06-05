@@ -6,6 +6,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { DetailComponent } from './detail/detail.component';
 import {SharedModule} from "../../shared/shared.module";
 import {FormsModule} from "@angular/forms";
+import {CarouselModule} from "ngx-owl-carousel-o";
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import {FormsModule} from "@angular/forms";
   imports: [
     CommonModule,
     SharedModule,
+    CarouselModule,
     ProductRoutingModule,
   ]
 })
