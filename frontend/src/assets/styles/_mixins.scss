@@ -8,3 +8,12 @@
   color: $green-text-color;
 }
 
+
+@mixin head-lora-36 {
+  font-family: 'Lora', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
+  color: #000000;
+}
+
