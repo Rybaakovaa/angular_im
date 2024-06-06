@@ -38,6 +38,8 @@ export class DetailComponent implements OnInit {
     nav: false
   }
 
+  count: number = 1;
+
   recommendedProducts: ProductType[] = [];
   product!: ProductType;
   serverStaticPath: string = environment.serverStaticPath;
@@ -60,6 +62,16 @@ export class DetailComponent implements OnInit {
       .subscribe((data: ProductType[]) => {
         this.recommendedProducts = data;
       });
+  }
+
+  updateCount(value: number) {
+    console.log(value);
+    this.count = value;
+  }
+
+
+  addToCart() {
+    console.log("add to cart: ", this.count)
   }
 
 }
