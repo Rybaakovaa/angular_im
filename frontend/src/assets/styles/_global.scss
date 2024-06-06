@@ -24,7 +24,7 @@ html, body {
   font-weight: 400;
   font-size: 14px;
   //color: #a8aba7;
-  color: $grey-text-color;
+  color: $gray-text-color;
 }
 
 .small-input {
@@ -60,7 +60,7 @@ html, body {
     background-color: transparent;
     border: 1px solid #6cac72;
     border-radius: 5px;
-    padding: 15px 58px;
+    padding: 15px;
     color: $green-text-color;
   }
 
@@ -89,7 +89,7 @@ a.button {
 
   a {
     text-decoration: none;
-    color: $grey-text-color;
+    color: $gray-text-color;
   }
 }
 
