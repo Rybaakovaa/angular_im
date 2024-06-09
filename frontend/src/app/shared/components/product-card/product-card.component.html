@@ -19,8 +19,8 @@
   <div class="product-card-info" *ngIf="!isLight">
     <div class="product-card-price">{{product.price}} BYN</div>
     <div class="product-card-action">
-      <button class="button" *ngIf="!isInCart" (click)="addToCart()">В корзину</button>
-      <button class="button button-transparent button-in-cart" *ngIf="isInCart" (click)="removeFromCart()">
+      <button class="button" *ngIf="!countInCart" (click)="addToCart()">В корзину</button>
+      <button class="button button-transparent button-in-cart" *ngIf="countInCart" (click)="removeFromCart()">
         <span>В корзине</span>
         <span>Удалить</span>
       </button>
