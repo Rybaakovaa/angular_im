@@ -22,10 +22,12 @@ export class CountSelectorComponent implements OnInit {
   decreaseCount() {
     if (this.count > 1) {
       this.count--;
+      this.onCountChange.emit(this.count);
     }
   }
   increaseCount() {
     this.count++;
+    this.onCountChange.emit(this.count);
   }
 
 }
