@@ -14,5 +14,8 @@ export type ProductType = {
     name: string,
     url: string
   },
-  countInCart?: number
+
+  // опциональные флаги, заполняются при работе с интерфейсом
+  countInCart?: number,
+  isInFavorite?: boolean
 }

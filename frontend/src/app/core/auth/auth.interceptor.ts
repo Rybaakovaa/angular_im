@@ -4,10 +4,10 @@ import {Injectable} from "@angular/core";
 import {AuthService} from "./auth.service";
 import {DefaultResponseType} from "../../../types/default-response.type";
 import {LoginResponseType} from "../../../types/login-response.type";
-import {error} from "@angular/compiler-cli/src/transformers/util";
 import {Router} from "@angular/router";
 
 
+// необходимо самостоятельно добавить AuthInterceptor в app.module
 // обязательный декоратор
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -19,7 +19,7 @@ export class AuthInterceptor implements HttpInterceptor {
     const tokens = this.authService.getTokens();
     if (tokens && tokens.accessToken) {
       const authReq = req.clone({
-        headers: req.headers.set('x-access-token', tokens.accessToken);
+        headers: req.headers.set('x-access-token', tokens.accessToken)
       });
       return next.handle(authReq)
         .pipe(

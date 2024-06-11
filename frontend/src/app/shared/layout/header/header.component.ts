@@ -34,8 +34,12 @@ export class HeaderComponent implements OnInit {
     });
 
     this.cartService.getCartCount()
-      .subscribe(data => {
-        this.count = data.count;
+      .subscribe((data: {count: number} | DefaultResponseType) => {
+        if ((data as DefaultResponseType).error) {
+          // ...
+          throw new Error((data as DefaultResponseType).message);
+        }
+        this.count = (data as {count: number}).count;
       });
 
     // подписываемся на измененеия кол-ва товаров в корзине после запросов
