@@ -192,3 +192,9 @@ a.button {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+
+
+ //убираем отступы для popup
+.mat-dialog-container {
+  padding: 0 !important;
+}

@@ -47,7 +47,7 @@ export class CartComponent implements OnInit {
   totalCount: number = 0;
 
   constructor(private productService: ProductService,
-              private cartService: CartService) {
+              private cartService: CartService,) {
   }
 
   ngOnInit(): void {
