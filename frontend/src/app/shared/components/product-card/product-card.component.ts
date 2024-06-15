@@ -23,6 +23,7 @@ export class ProductCardComponent implements OnInit {
 
   serverStaticPath: string = environment.serverStaticPath;
   count: number = 1;
+  isLoggedIn: boolean = this.authService.getIsLoggedIn();
 
   constructor(private cartService: CartService,
               private authService: AuthService,

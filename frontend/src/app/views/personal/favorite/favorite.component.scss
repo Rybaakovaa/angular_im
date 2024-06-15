@@ -64,6 +64,13 @@
           color: $gray-text-color;
         }
 
+        .favorite-product-action .favorite-product-action-count-cart {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+        }
+
         .favorite-product-action button {
           width: 160px;
         }

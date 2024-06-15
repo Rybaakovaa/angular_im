@@ -2,18 +2,25 @@
   <div class="container">
     <div class="favorite-title">Избранное</div>
 
-    <div class="favorite-empty" *ngIf="!products || (products.length === 0)">
+    <div class="favorite-empty" *ngIf="!favoriteProducts || (favoriteProducts.length === 0)">
       <div>В избраном нет товаров</div>
       <button class="button" routerLink="/catalog">В каталог</button>
     </div>
 
-    <div class="favorite-products" *ngIf="products">
-      <div class="favorite-product" *ngFor="let product of products">
+    <div class="favorite-products" *ngIf="favoriteProducts">
+      <div class="favorite-product" *ngFor="let product of favoriteProducts">
         <div class="favorite-product-image" style="background-image: url({{serverStaticPath + product.image}})"></div>
         <div class="favorite-product-name">{{product.name}}</div>
         <div class="favorite-product-price">{{product.price}} BYN</div>
         <div class="favorite-product-action">
-          <button class="button" routerLink="/products/{{product.url}}">Открыть</button>
+<!--          <button class="button" routerLink="/products/{{product.url}}">Открыть</button>-->
+          <button class="button" *ngIf="!product.count" (click)="addToCart(product)">В корзину</button>
+
+          <div class="favorite-product-action-count-cart" *ngIf="product.count">
+            <button class="button button-transparent button-in-cart">В корзине</button>
+            <count-selector [count]="product.count" (onCountChange)="updateCount(product, $event)"></count-selector>
+          </div>
+
         </div>
         <div class="favorite-product-remove" (click)="removeFromFavorite(product.id)">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

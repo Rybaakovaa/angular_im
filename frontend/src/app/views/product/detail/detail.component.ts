@@ -51,6 +51,8 @@ export class DetailComponent implements OnInit {
   product!: ProductType;
   serverStaticPath: string = environment.serverStaticPath;
 
+  isLoggedIn: boolean = this.authService.getIsLoggedIn();
+
 
   constructor(private productService: ProductService,
               private activatedRoute: ActivatedRoute,
