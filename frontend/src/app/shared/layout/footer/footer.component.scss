@@ -66,20 +66,20 @@ footer.footer {
           a {
             margin-right: 12px;
           }
+        }
 
-          .footer-payment {
-            display: grid;
-            grid-template-columns: repeat(3, 70px);
-            gap: 10px;
-            //max-width: 230px;
+        .footer-payment {
+          display: grid;
+          grid-template-columns: repeat(3, 70px);
+          gap: 10px;
+          //max-width: 230px;
 
-            .payment-item {
-              height: 35px;
-              width: 70px;
-              background-position: top;
-              //background-repeat: no-repeat;
-              //background-size: cover;
-            }
+          .payment-item {
+            height: 35px;
+            width: 70px;
+            background-position: top;
+            //background-repeat: no-repeat;
+            //background-size: cover;
           }
         }
       }
