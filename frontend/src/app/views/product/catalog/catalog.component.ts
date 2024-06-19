@@ -105,7 +105,7 @@ export class CatalogComponent implements OnInit {
                     this.appliedFilters.push({
                       name: foundType.name,
                       urlParam: foundType.url
-                    })
+                    });
                   }
                 }
               });
@@ -147,7 +147,7 @@ export class CatalogComponent implements OnInit {
                   if (this.cart && this.cart.items.length > 0) {
                     this.products = data.items.map(product => {
                       if (this.cart) {
-                        const productInCart = this.cart?.items.find(item => item.product.id === product.id)
+                        const productInCart = this.cart?.items.find(item => item.product.id === product.id);
                         // добавляем новое св-во с кол-вом товара
                         if (productInCart) {
                           product.countInCart = productInCart.quantity;
@@ -167,7 +167,7 @@ export class CatalogComponent implements OnInit {
                         product.isInFavorite = true;
                       }
                       return product;
-                    })
+                    });
                   }
                 });
             });
@@ -177,7 +177,7 @@ export class CatalogComponent implements OnInit {
   removeAppliedFilter(appliedFilter: AppliedFilterType) {
     if (appliedFilter.urlParam == 'heightFrom' || appliedFilter.urlParam == 'heightTo' ||
       appliedFilter.urlParam == 'diameterFrom' || appliedFilter.urlParam == 'diameterTo') {
-      delete this.activeParams[appliedFilter.urlParam]
+      delete this.activeParams[appliedFilter.urlParam];
     } else {
       this.activeParams.types = this.activeParams.types.filter(item => item !== appliedFilter.urlParam);
     }

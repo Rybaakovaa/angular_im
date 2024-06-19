@@ -50,7 +50,7 @@ export class AuthInterceptor implements HttpInterceptor {
         switchMap((result: DefaultResponseType | LoginResponseType) => {
           let error = "";
           if ((result as DefaultResponseType).error !== undefined) {
-            error = (result as DefaultResponseType).message
+            error = (result as DefaultResponseType).message;
           }
 
           const refreshResult = result as LoginResponseType;
@@ -74,6 +74,6 @@ export class AuthInterceptor implements HttpInterceptor {
           this.router.navigate(['/']);
           return throwError(() => error);
         })
-      )
+      );
   }
 }

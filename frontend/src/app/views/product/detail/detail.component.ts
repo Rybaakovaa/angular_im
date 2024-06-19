@@ -43,7 +43,7 @@ export class DetailComponent implements OnInit {
       }
     },
     nav: false
-  }
+  };
 
   count: number = 1; // переменная связи с дочерним компонентом
 
@@ -128,7 +128,7 @@ export class DetailComponent implements OnInit {
 
 
   addToCart() {
-    console.log("add to cart: ", this.count)
+    console.log("add to cart: ", this.count);
     this.cartService.updateCart(this.product.id, this.count)
       .subscribe((data: CartType | DefaultResponseType) => {
         if ((data as DefaultResponseType).error) {

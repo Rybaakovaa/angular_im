@@ -77,7 +77,7 @@ export class HeaderComponent implements OnInit {
     this.cartService.count$
       .subscribe(count => {
         this.count = count;
-      })
+      });
   }
 
   logout(): void {
@@ -97,7 +97,7 @@ export class HeaderComponent implements OnInit {
         // }
         this.doLogout();
       }
-    })
+    });
   }
 
   doLogout(): void {

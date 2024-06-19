@@ -37,7 +37,7 @@ export class MainComponent implements OnInit {
       }
     },
     nav: false
-  }
+  };
 
   customOptionsReviews: OwlOptions = {
     loop: true,
@@ -60,7 +60,7 @@ export class MainComponent implements OnInit {
       },
     },
     nav: false
-  }
+  };
 
   reviews = [
     {
@@ -99,7 +99,7 @@ export class MainComponent implements OnInit {
       text: "Хочу поблагодарить консультанта Ирину за помощь в выборе цветка для моей жены. Я ещё никогда не видел такого трепетного отношения к весьма непростому клиенту, которому сложно угодить! Сервис – огонь!"
     },
 
-  ]
+  ];
 
   constructor(private productService: ProductService) {
   }
@@ -108,7 +108,7 @@ export class MainComponent implements OnInit {
     this.productService.getBestProducts()
       .subscribe((data: ProductType[]) => {
         this.products = data;
-      })
+      });
   }
 
 }

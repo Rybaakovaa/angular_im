@@ -5,7 +5,7 @@ describe('loader service', () => {
   let loaderService: LoaderService;
   beforeEach(() => {
     loaderService = new LoaderService();
-  })
+  });
 
   it('should emit true value for showing loader', (done: DoneFn) => {
     loaderService.isShowed$.subscribe(value => {

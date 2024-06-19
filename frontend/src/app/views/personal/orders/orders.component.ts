@@ -11,7 +11,7 @@ import {OrderStatusUtil} from "../../../shared/utils/order-status.util";
 })
 export class OrdersComponent implements OnInit {
 
-  orders: OrderType[] =[]
+  orders: OrderType[] =[];
 
   constructor(private orderService: OrderService) { }
 

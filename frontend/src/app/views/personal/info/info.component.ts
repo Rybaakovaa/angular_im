@@ -61,7 +61,7 @@ export class InfoComponent implements OnInit {
           house: userInfo.house ? userInfo.house : '',
           entrance: userInfo.entrance ? userInfo.entrance : '',
           apartment: userInfo.apartment ? userInfo.apartment : '',
-        }
+        };
         this.userInfoForm.setValue(paramsToUpdate);
         if (userInfo.deliveryType) {
           this.deliveryType = userInfo.deliveryType;
@@ -130,7 +130,7 @@ export class InfoComponent implements OnInit {
               }
             }
           }
-        )
+        );
     }
   }
 }

@@ -100,7 +100,7 @@ export class OrderComponent implements OnInit {
             entrance: userInfo.entrance ? userInfo.entrance : '',
             apartment: userInfo.apartment ? userInfo.apartment : '',
             comment: ''
-          }
+          };
           this.orderForm.setValue(paramsToUpdate);
           if (userInfo.deliveryType) {
             this.deliveryType = userInfo.deliveryType;
@@ -117,7 +117,7 @@ export class OrderComponent implements OnInit {
       this.cart.items.forEach(item => {
         this.totalAmount += item.quantity * item.product.price;
         this.totalCount += item.quantity;
-      })
+      });
     }
   }
 

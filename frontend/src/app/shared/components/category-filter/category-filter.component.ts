@@ -88,7 +88,7 @@ export class CategoryFilterComponent implements OnInit{
     this.activeParams.page = 1;
     this.router.navigate(['/catalog'], {
       queryParams: this.activeParams
-    })
+    });
   }
 
   updateFilterParamFromTo(param: string, value: string) {
@@ -104,7 +104,7 @@ export class CategoryFilterComponent implements OnInit{
     this.activeParams.page = 1;
     this.router.navigate(['/catalog'], {
       queryParams: this.activeParams
-    })
+    });
   }
 
 }

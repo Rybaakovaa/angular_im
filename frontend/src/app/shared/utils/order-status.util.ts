@@ -21,7 +21,7 @@ export class OrderStatusUtil {
        color = '#B6D5B9';
        break;
    }
-   return {name, color}
+   return {name, color};
 
   }
 }
